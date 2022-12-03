@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-import random
-number = random.randint(-10000, 10000)
-digit = abs(number) % 10
+from calculator_1 import add, sub, mul, div
+a = 10
+b = 5
+if __name__ == "__main__":
+    print('{} + {} = {}'.format(a, b, add(a, b)))
+    print('{} - {} = {}'.format(a, b, sub(a, b)))
+    print('{} * {} = {}'.format(a, b, mul(a, b)))
+    print('{} / {} = {}'.format(a, b, div(a, b)))
 
-if number < 0:
-    digit = -digit
-print("Last digit of {} is {} and is ".format(number, digit), end="")
-if digit > 5:
-    print("greater than 5")
-elif digit == 0:
-    print("0")
-else:
-    print("less than 6 and not 0")
